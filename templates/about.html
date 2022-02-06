@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block main %}
+<h1>ABOUT LINK</h1>
+<h2>詳細</h2>
+<p>これまでに{{ num_services|intcomma }}個のサービスを設計しました。</p>
+
+<h3>言語</h3>
+<ul>
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% empty %}
+    <li>NO CONTENTS</li>
+    {% endfor %}
+</ul>
+
+<h4>〜現在の時刻〜</h4>
+<ul>
+    {% now "Y年m月d日 H時i分" %}
+    <li>上の時刻は世界標準時のため、お住まいの国の時刻とずれている時は、ロンドンとの時差分ひいてください。</li>
+</ul>
+{% endblock %}
