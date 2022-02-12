@@ -1,4 +1,3 @@
-from os import link
 from django.urls import path
 
 from .views import IndexView, AboutView
