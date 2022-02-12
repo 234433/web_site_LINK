@@ -5,6 +5,6 @@ from .views import IndexView, AboutView
 app_name = 'LINK'
 
 urlpatterns = [
-    path('HOME/', IndexView.as_view()),
+    path('', IndexView.as_view()),
     path('about/', AboutView.as_view()),
 ]
